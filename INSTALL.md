@@ -2,7 +2,7 @@
 
 DeepRrr is a small translator for macOS: select text, press Cmd+C twice, and a popup shows the translation; a two-pane window works like DeepL's. It is a personal fork of [MoePeek](https://github.com/cosZone/MoePeek) shared with a few friends and colleagues (issue #4). This page is for people who want to **use** DeepRrr (in Russian: [INSTALL.ru.md](INSTALL.ru.md)); building it from source is described in `docs/deep-r/README.md` inside each release's source archive.
 
-> **Status:** no Apple-notarized release yet; the publisher's Apple Developer ID is still being set up, and until then the installer refuses to install. Meanwhile **preview builds** are published: signed with the publisher's own certificate but not checked by Apple. The first, `0.21.0` preview, is out for a pilot install by friends; if something does not work, tell the publisher. See [Preview builds](#preview-builds-not-notarized-by-apple) below; the other sections (the `install-deepr.sh` installer) apply to the future notarized releases.
+> **Status:** no Apple-notarized release yet; the publisher's Apple Developer ID is still being set up, and until then the installer refuses to install. Meanwhile **preview builds** are published: signed with the publisher's own certificate but not checked by Apple. The current one, `0.21.1` preview, is out for a pilot install by friends; if something does not work, tell the publisher. See [Preview builds](#preview-builds-not-notarized-by-apple) below; the other sections (the `install-deepr.sh` installer) apply to the future notarized releases.
 
 ## Preview builds (not notarized by Apple)
 
@@ -10,20 +10,20 @@ Until the publisher has an Apple Developer ID certificate, DeepRrr is published 
 
 **Certificate fingerprint.** The signature is checked against the publisher's certificate fingerprint `d7b862527611395df9bb15be986dfd655f32ea09`. The publisher sends it to you in a separate message; make sure the two match. If they do not, do not install.
 
-The `install-deepr.sh` installer does not install previews: follow the steps below in **Terminal**. The examples use version `0.21.0`; use the version from your downloaded file name.
+The `install-deepr.sh` installer does not install previews: follow the steps below in **Terminal**. The examples use version `0.21.1`; use the version from your downloaded file name.
 
-1. Download both files of one preview into `~/Downloads`: `DeepRrr-0.21.0-preview.zip` and `DeepRrr-0.21.0-preview.zip.sha256`.
+1. Download both files of one preview into `~/Downloads`: `DeepRrr-0.21.1-preview.zip` and `DeepRrr-0.21.1-preview.zip.sha256`.
 2. Check the checksum; it must print `OK`:
 
    ```sh
    cd ~/Downloads
-   shasum -a 256 -c "DeepRrr-0.21.0-preview.zip.sha256"
+   shasum -a 256 -c "DeepRrr-0.21.1-preview.zip.sha256"
    ```
 
 3. Unzip into a staging folder. If `~/Downloads/deepr-new` is left from last time, delete it first, otherwise the command stops:
 
    ```sh
-   mkdir ~/Downloads/deepr-new && ditto -x -k "DeepRrr-0.21.0-preview.zip" ~/Downloads/deepr-new
+   mkdir ~/Downloads/deepr-new && ditto -x -k "DeepRrr-0.21.1-preview.zip" ~/Downloads/deepr-new
    ```
 
 4. Verify and install with one block: paste it into Terminal as a whole. It checks that the app is signed by the publisher's certificate, unmodified and really DeepRrr; then it moves the old copy aside (if there is one) and installs the new one as a whole. On any error it stops without going further and says why. If DeepRrr is running, quit it first (menu bar icon > Quit DeepRrr). It must end with `INSTALLED, SIGNATURE OK`:
