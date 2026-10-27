@@ -26,7 +26,7 @@ The `install-deepr.sh` installer does not install previews: follow the steps bel
    mkdir ~/Downloads/deepr-new && ditto -x -k "DeepRrr-0.21.0-preview.zip" ~/Downloads/deepr-new
    ```
 
-4. Verify and install with one block: paste it into Terminal as a whole. It checks that the app is signed by the publisher's certificate, unmodified and really DeepRrr; then it moves the old copy aside (if there is one) and installs the new one as a whole. On any error it stops without going further and says why. If DeepRrr is running, quit it first (menu bar icon > Quit DeepRrr). The app was called DeepR before: if the old copy is still at `~/Applications/DeepR.app`, the block stops once and asks you to quit it and move it to the Trash; your settings stay. It must end with `INSTALLED, SIGNATURE OK`:
+4. Verify and install with one block: paste it into Terminal as a whole. It checks that the app is signed by the publisher's certificate, unmodified and really DeepRrr; then it moves the old copy aside (if there is one) and installs the new one as a whole. On any error it stops without going further and says why. If DeepRrr is running, quit it first (menu bar icon > Quit DeepRrr). It must end with `INSTALLED, SIGNATURE OK`:
 
    ```sh
    bash -eu <<'EOF'
